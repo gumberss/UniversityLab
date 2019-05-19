@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFS_DFS", "BFS_DFS\BFS_DFS.csproj", "{5889CCAE-5A6C-473D-A1FC-93531E2E7119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFS_DFS_Test", "BFS_DFS_Test\BFS_DFS_Test.csproj", "{5318CB0A-0AD3-4620-B504-641A4249179C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5889CCAE-5A6C-473D-A1FC-93531E2E7119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5889CCAE-5A6C-473D-A1FC-93531E2E7119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5889CCAE-5A6C-473D-A1FC-93531E2E7119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5889CCAE-5A6C-473D-A1FC-93531E2E7119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5318CB0A-0AD3-4620-B504-641A4249179C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5318CB0A-0AD3-4620-B504-641A4249179C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5318CB0A-0AD3-4620-B504-641A4249179C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5318CB0A-0AD3-4620-B504-641A4249179C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09A31C45-2CC1-4E25-AF1E-2DA2B6A2659B}
+	EndGlobalSection
+EndGlobal

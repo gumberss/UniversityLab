@@ -1,0 +1,7 @@
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\bin\Debug\BFS_DFS.exe.config
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\bin\Debug\BFS_DFS.exe
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\bin\Debug\BFS_DFS.pdb
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.csproj.CoreCompileInputs.cache
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.exe
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.pdb
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.csprojAssemblyReference.cache
