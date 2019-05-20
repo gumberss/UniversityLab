@@ -39,5 +39,33 @@ namespace BFS_DFS.Domain
                 .OrderBy(x => x.Distance)
                 .FirstOrDefault();
         }
+
+        public List<Tree> GenerateTree()
+        {
+            List<Tree> trees = new List<Tree>();
+
+            trees.AddRange(Vertices
+                .Where(x => x.Previus == null)
+                .Select(x => new Tree(x)));
+
+            foreach (var current in Vertices.Where(x => x.Previus != null))
+            {
+                Fill(current, trees);
+            }
+
+            return trees;
+        }
+
+        private Tree Fill(Vertex current, List<Tree> baseTree)
+        {
+            var findedTree = baseTree.Find(x => x.Contains(current.Previus));
+
+            if (findedTree == null)
+            {
+                findedTree = Fill(current.Previus, baseTree);
+            }
+
+            return findedTree.AddSon(current);
+        }
     }
 }

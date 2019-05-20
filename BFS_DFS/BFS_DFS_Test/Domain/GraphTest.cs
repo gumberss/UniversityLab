@@ -39,5 +39,44 @@ namespace BFS_DFS_Test.Domain
             closer.Should()
                 .Be(b, because: "o vértice a já foi visitado, então o b é o vertice com a menor distância não visitado");
         }
+
+        [TestMethod]
+        public void Deveria_criar_uma_arvore_para_cada_vertice_sem_anterior()
+        {
+            Vertex a = new Vertex("a");
+            Vertex b = new Vertex("b") { Previus = a };
+            Vertex c = new Vertex("c");
+
+            Graph graph = new Graph(a, b, c);
+
+            var trees = graph.GenerateTree();
+
+            trees.Should().HaveCount(2, because: "O vertice 'a' e o vértice 'c' não possuem anteriores");
+        }
+
+        [TestMethod]
+        public void Deveria_adicionar_um_filho_a_arvore_correta_quando_vertice_possui_um_pai()
+        {
+            Vertex a = new Vertex("a");
+            Vertex b = new Vertex("b") { Previus = a };
+            Vertex c = new Vertex("c");
+            Vertex d = new Vertex("d") { Previus = a };
+            Vertex e = new Vertex("e") { Previus = d };
+
+            Graph graph = new Graph(a, b, c, d, e);
+
+            var trees = graph.GenerateTree();
+
+            trees.Should().HaveCount(2, because: "O vertice 'a' e o vértice 'c' não possuem anteriores");
+
+            var aTree = trees.First();
+
+            aTree.Sons.Should().HaveCount(2);
+            aTree.Sons.First().Vertex.Should().Be(b);
+            aTree.Sons.Last().Vertex.Should().Be(d);
+            aTree.Sons.Last().Sons.Should().HaveCount(1);
+            aTree.Sons.Last().Sons.First().Vertex.Should().Be(e);
+
+        }
     }
 }

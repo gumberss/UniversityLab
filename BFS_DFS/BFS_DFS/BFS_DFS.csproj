@@ -46,6 +46,7 @@
     <Compile Include="Domain\BusinessException.cs" />
     <Compile Include="Domain\Edge.cs" />
     <Compile Include="Domain\Graph.cs" />
+    <Compile Include="Domain\Tree.cs" />
     <Compile Include="Domain\Vertex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
