@@ -2,22 +2,18 @@
 {
     public class Edge
     {
-        public Edge(Vertex from, Vertex to, long weight, bool directed) : this(from, to, directed)
-        {
-            Weight = weight;
-        }
-
-        public Edge(Vertex from, Vertex to, bool directed)
+        public Edge(Vertex from, Vertex to, long weight, bool directed)
         {
             From = from;
             To = to;
+            Weight = weight;
 
             if (directed)
                 From.AddEdge(this);
             else
             {
                 From.AddEdge(this);
-                To.AddEdge(new Edge(to, from, true));
+                To.AddEdge(new Edge(to, from, Weight, true));
             }
         }
 
