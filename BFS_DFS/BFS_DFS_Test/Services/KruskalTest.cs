@@ -3,12 +3,11 @@ using BFS_DFS.Services;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Linq;
 
 namespace BFS_DFS_Test.Services
 {
     [TestClass]
-    public class PrimTest
+    public class KruskalTest
     {
         [TestMethod]
         public void Deveria_lancar_excecao_quando_vertice_inicial_for_nulo()
@@ -17,9 +16,9 @@ namespace BFS_DFS_Test.Services
 
             Graph graph = new Graph();
 
-            Prim prim = new Prim();
+            Kruskal kruskal = new Kruskal();
 
-            Action action = () => prim.Process(ref graph, startVertex);
+            Action action = () => kruskal.Process(ref graph, startVertex);
 
             action.Should().ThrowExactly<BusinessException>()
                   .And.Message.Should().Be("O vértice inicial não pode ser nulo");
@@ -32,30 +31,16 @@ namespace BFS_DFS_Test.Services
 
             Graph graph = new Graph(new Vertex("Another"));
 
-            Prim prim = new Prim();
+            Kruskal kruskal = new Kruskal();
 
-            Action action = () => prim.Process(ref graph, startVertex);
+            Action action = () => kruskal.Process(ref graph, startVertex);
 
             action.Should().ThrowExactly<BusinessException>()
                   .And.Message.Should().Be("O vértice inicial 'Starter' não está presente no grafo");
         }
 
         [TestMethod]
-        public void Deveria_colocar_a_distancia_do_vertice_inicial_como_zero_dentro_do_grafo()
-        {
-            Vertex startVertex = new Vertex("Starter");
-
-            Graph graph = new Graph(startVertex);
-
-            Prim prim = new Prim();
-
-            prim.Process(ref graph, startVertex);
-
-            graph.Vertices[0].Distance.Should().Be(0);
-        }
-
-        [TestMethod]
-        public void Deveria_encontrar_a_arvore_geradora_minima()
+        public void Deveria_processar_o_algoritmo_retornando_o_valor_do_menor_caminho_corretamente()
         {
             Vertex a = new Vertex("a");
             Vertex b = new Vertex("b");
@@ -74,25 +59,11 @@ namespace BFS_DFS_Test.Services
 
             Graph graph = new Graph(a, b, c, d, e);
 
-            Prim prim = new Prim();
+            Kruskal kruskal = new Kruskal();
 
-            var totalDistance = prim.Process(ref graph, b);
+            var totalDistance = kruskal.Process(ref graph, b);
 
             totalDistance.Should().Be(8);
-
-            a.Distance.Should().Be(3);
-            b.Distance.Should().Be(0);
-            c.Distance.Should().Be(2);
-            d.Distance.Should().Be(2);
-            e.Distance.Should().Be(1);
-
-            a.Previus.Should().Be(c);
-            b.Previus.Should().Be(null);
-            c.Previus.Should().Be(d);
-            d.Previus.Should().Be(b);
-            e.Previus.Should().Be(b);
-
-            new[] { a, b, c, d, e }.All(x => x.Visited).Should().BeTrue();
         }
     }
 }

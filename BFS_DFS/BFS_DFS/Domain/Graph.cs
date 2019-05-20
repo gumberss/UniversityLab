@@ -67,5 +67,10 @@ namespace BFS_DFS.Domain
 
             return findedTree.AddSon(current);
         }
+
+        public IEnumerable<Edge> GetAllEdges()
+        {
+            return Vertices.SelectMany(x => x.Edges).Distinct();
+        }
     }
 }
