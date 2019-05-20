@@ -3,6 +3,7 @@ using BFS_DFS.Services;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 
 namespace BFS_DFS_Test.Services
 {
@@ -61,9 +62,9 @@ namespace BFS_DFS_Test.Services
 
             Kruskal kruskal = new Kruskal();
 
-            var totalDistance = kruskal.Process(ref graph, b);
+            var smallerPath = kruskal.Process(ref graph, b);
 
-            totalDistance.Should().Be(8);
+            smallerPath.Sum(x=> x.Weight).Should().Be(8);
         }
     }
 }

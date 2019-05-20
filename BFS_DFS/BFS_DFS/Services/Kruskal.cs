@@ -1,12 +1,13 @@
 ﻿using BFS_DFS.Domain;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace BFS_DFS.Services
 {
     public class Kruskal
     {
-        public long Process(ref Graph graph, Vertex startVertex)
+        public ReadOnlyCollection<Edge> Process(ref Graph graph, Vertex startVertex)
         {
             if (startVertex == null)
                 throw new BusinessException($"O vértice inicial não pode ser nulo");
@@ -41,7 +42,7 @@ namespace BFS_DFS.Services
                 }
             }
 
-            return smallerPath.Sum(x => x.Weight);
+            return smallerPath.AsReadOnly();
         }
     }
 }
