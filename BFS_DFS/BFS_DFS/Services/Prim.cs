@@ -1,9 +1,5 @@
 ﻿using BFS_DFS.Domain;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BFS_DFS.Services
 {
@@ -39,12 +35,12 @@ namespace BFS_DFS.Services
                     if (!edge.To.Visited && edge.Weight < edge.To.Distance)
                     {
                         edge.To.Previus = closer;
-                        edge.To.Distance = edge.Weight ;
+                        edge.To.Distance = edge.Weight;
                     }
                 }
             }
 
-            return graph.Vertices.Sum(x=> x.Distance);
+            return graph.Vertices.Sum(x => x.Distance);
         }
     }
 }
