@@ -19,11 +19,6 @@ namespace BFS_DFS.Domain.Huffman
             return MainVertex.GetAllVertices();
         }
 
-        public String ConvertToText(String binaryText)
-        {
-            return "";
-        }
-
         /// <summary>
         /// Assumiremos que quando o vértice principal da arvore possuir valor
         /// essa árvore é uma folha, sendo assim retornará 0
