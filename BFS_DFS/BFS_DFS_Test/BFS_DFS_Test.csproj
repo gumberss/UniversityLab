@@ -58,8 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\GraphTest.cs" />
+    <Compile Include="Domain\HuffmanTreeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DijkstraTest.cs" />
+    <Compile Include="Services\HuffmanTreeGeneratorTest.cs" />
     <Compile Include="Services\KruskalTest.cs" />
     <Compile Include="Services\PrimTest.cs" />
   </ItemGroup>
