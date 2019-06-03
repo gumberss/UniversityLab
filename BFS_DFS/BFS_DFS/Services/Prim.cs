@@ -12,7 +12,7 @@ namespace BFS_DFS.Services
         /// <param name="graph">Gravo para encontrar o caminho mínimo</param>
         /// <param name="startVertex">Tamanho do caminho mínimo encontrado</param>
         /// <returns></returns>
-        public long Process(ref Graph graph, Vertex startVertex)
+        public double Process(ref Graph graph, Vertex startVertex)
         {
             if (startVertex == null)
                 throw new BusinessException($"O vértice inicial não pode ser nulo");

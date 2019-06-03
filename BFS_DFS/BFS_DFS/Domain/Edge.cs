@@ -2,7 +2,7 @@
 {
     public class Edge
     {
-        public Edge(Vertex from, Vertex to, long weight, bool directed)
+        public Edge(Vertex from, Vertex to, double weight, bool directed)
         {
             From = from;
             To = to;
@@ -17,7 +17,12 @@
             }
         }
 
-        public long Weight { get; private set; }
+        public void ChangeWeight(double newWeight)
+        {
+            Weight = newWeight;
+        }
+
+        public double Weight { get; private set; }
 
         public Vertex From { get; private set; }
 

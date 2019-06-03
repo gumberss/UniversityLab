@@ -18,11 +18,13 @@ namespace BFS_DFS.Domain
 
         public Vertex Previus { get; set; }
 
-        public long Distance { get; set; }
+        public double Distance { get; set; }
 
         public bool Visited { get; set; }
 
         public List<Edge> Edges { get; private set; }
+
+        public double Weight { get; set; }
 
         public void AddEdge(Edge edge)
         {
