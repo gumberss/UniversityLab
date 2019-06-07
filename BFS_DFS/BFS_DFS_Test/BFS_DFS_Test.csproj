@@ -63,8 +63,9 @@
     <Compile Include="Services\DijkstraTest.cs" />
     <Compile Include="Services\HuffmanTreeGeneratorTest.cs" />
     <Compile Include="Services\KruskalTest.cs" />
-    <Compile Include="Services\ListTwo\UnitTest1.cs" />
+    <Compile Include="Services\ListTwo\QuestionOneTest.cs" />
     <Compile Include="Services\PrimTest.cs" />
+    <Compile Include="Services\WeightSumProblemTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

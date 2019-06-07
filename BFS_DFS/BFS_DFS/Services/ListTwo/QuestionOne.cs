@@ -24,7 +24,7 @@ namespace BFS_DFS.Services.ListTwo
             if (!graph.Contains(finalVertex))
                 throw new BusinessException($"O vértice inicial '{finalVertex.Name}' não está presente no grafo");
 
-            graph.GetAllEdges().ToList().ForEach(x => x.ChangeWeight(x.Weight / carAutonomy * fuelPrice + x.To.Weight) );
+            graph.GetAllEdges().ToList().ForEach(x => x.ChangeWeight(x.Weight / carAutonomy * fuelPrice + x.To.Weight));
 
             var dijkstra = new Dijkstra();
 

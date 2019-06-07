@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BFS_DFS_Test.Services.ListTwo
 {
     [TestClass]
-    public class UnitTest1
+    public class QuestionOneTest
     {
         private Graph _graph;
         private QuestionOne _questionOne;
@@ -16,7 +16,7 @@ namespace BFS_DFS_Test.Services.ListTwo
         private Vertex _c;
         private Vertex _d;
 
-        public UnitTest1()
+        public QuestionOneTest()
         {
             _a = new Vertex("a");
             _b = new Vertex("b") { Weight = 50 };//Toll

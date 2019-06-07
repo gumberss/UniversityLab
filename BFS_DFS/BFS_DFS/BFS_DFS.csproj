@@ -58,6 +58,7 @@
     <Compile Include="Services\Kruskal.cs" />
     <Compile Include="Services\ListTwo\QuestionOne.cs" />
     <Compile Include="Services\Prim.cs" />
+    <Compile Include="Services\WeightSumProblem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
