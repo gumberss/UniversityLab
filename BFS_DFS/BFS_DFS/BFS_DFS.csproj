@@ -48,11 +48,13 @@
     <Compile Include="Domain\Graph.cs" />
     <Compile Include="Domain\Huffman\HuffmanTree.cs" />
     <Compile Include="Domain\Huffman\HuffmanVertex.cs" />
+    <Compile Include="Domain\Item.cs" />
     <Compile Include="Domain\ListTwo\ListTwoVertex.cs" />
     <Compile Include="Domain\Tree.cs" />
     <Compile Include="Domain\Vertex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BagProblem.cs" />
     <Compile Include="Services\Dijkstra.cs" />
     <Compile Include="Services\HuffmanTreeGenerator.cs" />
     <Compile Include="Services\Kruskal.cs" />

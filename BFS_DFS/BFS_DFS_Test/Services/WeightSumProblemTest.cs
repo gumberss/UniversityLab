@@ -1,4 +1,5 @@
-﻿using BFS_DFS.Services;
+﻿using BFS_DFS.Domain;
+using BFS_DFS.Services;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace BFS_DFS_Test.Services
 
             var maxWeight = 15;
 
-            var returnData = new WeightSumProblem().Process(items, maxWeight, items.Length - 1);
+            var returnData = new WeightSumProblem().Process(items, maxWeight);
 
             returnData.Should().HaveCount(4);
 
