@@ -64,6 +64,7 @@
     <Compile Include="Services\HuffmanTreeGeneratorTest.cs" />
     <Compile Include="Services\KruskalTest.cs" />
     <Compile Include="Services\ListTwo\QuestionOneTest.cs" />
+    <Compile Include="Services\ListTwo\QuestionTwoTest.cs" />
     <Compile Include="Services\PrimTest.cs" />
     <Compile Include="Services\WeightSumProblemTest.cs" />
   </ItemGroup>
