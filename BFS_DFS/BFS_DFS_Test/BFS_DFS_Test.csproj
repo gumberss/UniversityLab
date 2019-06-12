@@ -60,6 +60,7 @@
     <Compile Include="Domain\GraphTest.cs" />
     <Compile Include="Domain\HuffmanTreeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BagProblemTest.cs" />
     <Compile Include="Services\DijkstraTest.cs" />
     <Compile Include="Services\HuffmanTreeGeneratorTest.cs" />
     <Compile Include="Services\KruskalTest.cs" />

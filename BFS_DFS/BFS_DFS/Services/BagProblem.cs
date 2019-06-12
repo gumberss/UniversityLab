@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BFS_DFS.Services
 {
@@ -12,26 +10,24 @@ namespace BFS_DFS.Services
     /// </summary>
     public class BagProblem
     {
-        public double Process(Item[] items, double maxWeight)
+        public double ProcessWithMemoization(Item[] items, int maxWeight)
         {
-            var matrixColumns = (int)maxWeight;
+            double[,] memoization = new double[items.Length+1, maxWeight+1];
 
-            double[,] memoization = new double[items.Length, matrixColumns];
-
-            for (int i = 0; i < matrixColumns; i++)
+            for (int i = 0; i < maxWeight; i++)
             {
-                memoization[0, i] = 0;//ver se o i é na linha ou coluna
+                memoization[0, i] = 0;
             }
 
-            for (int i = 1; i < items.Length; i++)
+            for (int i = 1; i <= items.Length; i++)
             {
-                for (int w = 0; w < maxWeight; w++)
+                for (int w = 0; w <= maxWeight; w++)
                 {
-                    if (maxWeight < items[i].Weight)
+                    if (w < items[i-1].Weight)
                         memoization[i, w] = memoization[i - 1, w];
                     else
                     {
-                        var currentItem = items[i];
+                        var currentItem = items[i-1];
 
                         var currentItemWeight = (int)currentItem.Weight;
 
@@ -44,10 +40,10 @@ namespace BFS_DFS.Services
                 }
             }
 
-            return memoization[items.Length, matrixColumns];
+            return memoization[items.Length, maxWeight];
         }
 
-        private List<Item> SolveProblem(Item[] items, double maxWeight, long current)
+        public List<Item> SolveProblem(Item[] items, double maxWeight, long current)
         {
             if (current == -1) return new List<Item>();
 
