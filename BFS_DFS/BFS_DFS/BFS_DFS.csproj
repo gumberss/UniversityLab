@@ -52,8 +52,8 @@
     <Compile Include="Domain\Huffman\HuffmanTree.cs" />
     <Compile Include="Domain\Huffman\HuffmanVertex.cs" />
     <Compile Include="Domain\Item.cs" />
-    <Compile Include="Domain\ListTwo\ListTwoVertex.cs" />
     <Compile Include="Domain\Tree.cs" />
+    <Compile Include="Domain\Truck.cs" />
     <Compile Include="Domain\Vertex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +62,7 @@
     <Compile Include="Services\HuffmanTreeGenerator.cs" />
     <Compile Include="Services\Kruskal.cs" />
     <Compile Include="Services\ListTwo\QuestionOne.cs" />
+    <Compile Include="Services\ListTwo\QuestionThree.cs" />
     <Compile Include="Services\ListTwo\QuestionTwo.cs" />
     <Compile Include="Services\Prim.cs" />
     <Compile Include="Services\WeightSumProblem.cs" />
