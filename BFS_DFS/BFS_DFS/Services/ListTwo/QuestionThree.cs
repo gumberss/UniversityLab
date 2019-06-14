@@ -18,7 +18,7 @@ namespace BFS_DFS.Services.ListTwo
         /// </summary>
         /// <param name="items">Items para colocar nos caminhões</param>
         /// <param name="trucks">Caminhões com suas respectivas capacidades de carga</param>
-        /// <returns></returns>
+        /// <returns>Tupla com os itens que não poderão ser entregues e o prejuizo que tais itens geraram</returns>
         public (Item[] notDelivered, double lostProfit) Process(Item[] items, Truck[] trucks)
         {
             foreach (var truck in trucks.OrderBy(x => x.LoadCapacity))
