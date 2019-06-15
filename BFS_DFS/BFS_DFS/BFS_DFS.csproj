@@ -61,6 +61,7 @@
     <Compile Include="Services\Dijkstra.cs" />
     <Compile Include="Services\HuffmanTreeGenerator.cs" />
     <Compile Include="Services\Kruskal.cs" />
+    <Compile Include="Services\ListTwo\QuestionFour.cs" />
     <Compile Include="Services\ListTwo\QuestionOne.cs" />
     <Compile Include="Services\ListTwo\QuestionThree.cs" />
     <Compile Include="Services\ListTwo\QuestionTwo.cs" />
