@@ -20,7 +20,12 @@ namespace BFS_DFS.Services.ListTwo
     ///     um algoritmo com complexidade O(n^k), sendo k uma constante, consegue verificar se essa resposta é uma 
     ///     solução para o problema.
     ///     
+    /// D) Um método heurístico é um conjunto de regras e métodos utilizados para ser capaz de chegar a um resultado 
+    /// final, esse resultado final pode estar entre ótimo e péssimo, não fornecendo um limite formal de qualidade.
     /// 
+    ///    Um algoritmo aproximado é um algoritmo heurístico que pode ter a qualidade da resposta, provada matematicamente,
+    ///    dentro de um limite assintótico polinomial no pior caso.
+    ///     
     /// </summary>
     public class QuestionFour
     {

@@ -7,3 +7,4 @@ D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.pdb
 D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\bin\Debug\System.ValueTuple.dll
 D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\bin\Debug\System.ValueTuple.xml
 D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.csproj.CopyComplete
+D:\Projetos\GitHub\UniversityLab\BFS_DFS\BFS_DFS\obj\Debug\BFS_DFS.csprojAssemblyReference.cache
