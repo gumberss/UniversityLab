@@ -10,8 +10,8 @@ namespace BFS_DFS.Services
         /// O algoritmo de Prim é semelhante ao algoritmo de Dijkstra
         /// </summary>
         /// <param name="graph">Grafo para encontrar o caminho mínimo</param>
-        /// <param name="startVertex">Tamanho do caminho mínimo encontrado</param>
-        /// <returns></returns>
+        /// <param name="startVertex">Vertice inicial</param>
+        /// <returns>Tamanho do caminho mínimo encontrado</returns>
         public double Process(ref Graph graph, Vertex startVertex)
         {
             if (startVertex == null)
